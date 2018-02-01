@@ -1,0 +1,16 @@
+{
+	"name": "GAS-shell",
+	"version": "0.1.0",
+	"description": "Google Apps Script shell project",
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"devDependencies": {
+		"gas-lib": "^1.2.0",
+		"grunt": "^1.0.1",
+		"grunt-contrib-clean": "^1.0.0",
+		"grunt-contrib-copy": "^1.0.0"
+	}
+}
