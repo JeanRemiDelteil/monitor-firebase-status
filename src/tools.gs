@@ -55,8 +55,6 @@ SpreadsheetUtils = {};
 /**
  * Directly write a double array in the spreadsheet
  * 
- * @this SpreadsheetApp.Spreadsheet
- * 
  * @param {SpreadsheetApp.Sheet} sheet
  * @param {string} firstCell - A1 notation selecting the top-left corner of the Array
  * @param {Array.<[]>} values

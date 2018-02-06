@@ -14,6 +14,15 @@
  *   FIREBASE_ISSUE_FEED: string
  *   FIREBASE_BASE_LINK: string
  *   
+ *   FEED_HEADERS: {
+ *     id: number,
+ *     updated: number,
+ *     service: number,
+ *     title: number,
+ *     link: number,
+ *     content: number,
+ *   }
+ *   
  *   services: Object.<{}>
  * }} _self
  */
@@ -63,6 +72,14 @@ function _init_(){
 	_self.FIREBASE_ISSUE_FEED = 'https://status.firebase.google.com/feed.atom';
 	_self.FIREBASE_BASE_LINK = 'https://status.firebase.google.com';
 	
+	_self.FEED_HEADERS = {
+		id: 0,
+		updated: 1,
+		service: 2,
+		title: 3,
+		link: 4,
+		content: 5
+	};
 	
 	// Save variables
 	this._self_ = _self;

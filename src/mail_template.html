@@ -1,0 +1,23 @@
+Latest incident status from Firebase status:<br>
+<br>
+<table cellspacing="0" cellpadding="5px" dir="ltr" border="1" style="border: solid 1px #808080;border-collapse: collapse;">
+	<thead>
+	<tr>
+		<th>Time</th>
+		<th>Service</th>
+		<th>Message</th>
+	</tr>
+	</thead>
+	<tbody>
+	<? for(var i = 0; i < issues.length; i++){ ?>
+	<tr>
+		<td><?= issues[i].updated ?></td>
+		<td><?= issues[i].service ?></td>
+		<td>
+			<div style="margin-bottom: 6px;"><a href="<?= issues[i].link ?>"><?= issues[i].title ?></a></div>
+			<div><?= issues[i].content ?></div>
+		</td>
+	</tr>
+	<? } ?>
+	</tbody>
+</table>
