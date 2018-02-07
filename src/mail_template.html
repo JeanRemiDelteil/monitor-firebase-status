@@ -15,7 +15,7 @@ Latest incident status from Firebase status:<br>
 		<td><?= issues[i].service ?></td>
 		<td>
 			<div style="margin-bottom: 6px;"><a href="<?= issues[i].link ?>"><?= issues[i].title ?></a></div>
-			<div><?= issues[i].content ?></div>
+			<pre><?= issues[i].content ?></pre>
 		</td>
 	</tr>
 	<? } ?>
