@@ -199,8 +199,10 @@ function checkXML_feed(){
 	}
 	
 	// Save sent incident in the spreadsheet
-	_self.sheets.xmlFeed.insertRowsAfter(3, savedIssues.length);
-	SpreadsheetUtils.writeArray(_self.sheets.xmlFeed, 'A4', savedIssues);
+	if (savedIssues.length) {
+		_self.sheets.xmlFeed.insertRowsAfter(3, savedIssues.length);
+		SpreadsheetUtils.writeArray(_self.sheets.xmlFeed, 'A4', savedIssues);
+	}
 	
 	_self.sheets.xmlFeed.getRange('B1')
 		.setValue(lastUpdated);
