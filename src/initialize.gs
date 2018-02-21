@@ -38,7 +38,9 @@ function _init_(){
 	var _self = {};
 	
 	// Start initializing global variables
-	_self.sps = SpreadsheetApp.getActiveSpreadsheet();
+	_self.spsId = '134nDKuyJZ8kjZTWqB8uvQ6YW997qln_aAIVPd4GkPkw';
+	// _self.sps = SpreadsheetApp.getActiveSpreadsheet(); --> For some reasons, this fails when called from a time trigger from the other account
+	_self.sps = SpreadsheetApp.openById(_self.spsId);
 	
 	_self.sheets = {
 		issues: _self.sps.getSheetByName('issues'),
