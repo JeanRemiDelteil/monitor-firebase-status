@@ -130,11 +130,12 @@ function _init_XML_feedSheet_(sheet){
 	
 	// Table headers
 	var headers = [
+		'Id',
 		'Updated',
-		'id',
-		'title',
-		'link',
-		'message'
+		'Service',
+		'Title',
+		'Link',
+		'Message'
 	];
 	
 	sheet.getRange(3, 1, 1, headers.length).setValues([headers]);
@@ -159,10 +160,12 @@ function _loadEmailService(sheet) {
 	
 	for (var i = 1; i < data.length; i++){
 		var row = data[i];
-		var res = row[1].replace(/\s*,\s*/, ',').split(',');
+		var res = row[1].split(',');
 		
 		// For each service, save emails
 		res.forEach(function(serviceName){
+			serviceName = serviceName.trim();
+			
 			services[ serviceName ] = services[ serviceName ] || {};
 			
 			services[ serviceName ][row[0]] = true;
