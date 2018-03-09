@@ -1,4 +1,16 @@
 # README
+## Monitor Firebase status
+Simple Google Apps Script that will send notification when some Firebase Services have issues
+
+- Install the script in a Spreadsheet bound Google appsScript.
+- run once the function: checkXML_feed() to authorize the script
+- Then add a recurring time trigger every 5 minute with the function: **checkXML_feed()**
+
+Add emails to notify in a sheet named 'emails' with a simple table like starting at A1:
+
+Email                  | Services
+---------------------- | --------
+some.email@example.com | Hosting, Realtime Database, Authentication, Functions
 
 ## How do I get set up?
 
